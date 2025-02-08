@@ -1,0 +1,42 @@
+<div class="container">
+    <h2>Update User</h2>
+    
+    <!-- Display error message if any -->
+    <div *ngIf="MsgError" class="alert alert-danger">
+      {{ MsgError }}
+    </div>
+    
+    <!-- User update form -->
+    <form [formGroup]="userForm" (ngSubmit)="UpdateUser()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          formControlName="username"
+          class="form-control"
+          [ngClass]="{'is-invalid': userForm.controls['username'].invalid && userForm.controls['username'].touched}"
+        />
+        <div *ngIf="userForm.controls['username'].invalid && userForm.controls['username'].touched" class="invalid-feedback">
+          Username is required.
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          class="form-control"
+          [ngClass]="{'is-invalid': userForm.controls['email'].invalid && userForm.controls['email'].touched}"
+        />
+        <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched" class="invalid-feedback">
+          Email is required.
+        </div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Update User</button>
+    </form>
+  </div>
+  

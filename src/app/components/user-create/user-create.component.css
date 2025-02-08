@@ -1,0 +1,19 @@
+.container {
+    width: 400px;
+    margin: auto;
+    padding-top: 50px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .invalid-feedback {
+    display: block;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+  

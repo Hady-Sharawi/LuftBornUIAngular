@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Create Product</h2>
+    
+    <div *ngIf="MsgError" class="alert alert-danger">
+      {{ MsgError }}
+    </div>
+  
+    <form [formGroup]="productForm" (ngSubmit)="AddProduct()">
+      <div class="form-group">
+        <label for="name">Product Name</label>
+        <input type="text" id="name" formControlName="name" class="form-control" 
+               [ngClass]="{'is-invalid': productForm.controls['name'].invalid && productForm.controls['name'].touched}" />
+        <div *ngIf="productForm.controls['name'].invalid && productForm.controls['name'].touched" class="invalid-feedback">
+          Product Name is required.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">Create Product</button>
+    </form>
+  </div>
+  

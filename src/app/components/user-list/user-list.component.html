@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>User List</h2>
+    
+    <!-- Table displaying users -->
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.userName }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+
+            <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+            <button class="btn btn-danger" (click)="updateUser(user.id)">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Message when no users are available -->
+    <div *ngIf="users.length === 0" class="alert alert-warning">
+      No users available.
+    </div>
+  </div>
+  

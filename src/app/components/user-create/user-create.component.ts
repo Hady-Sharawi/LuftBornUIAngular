@@ -4,9 +4,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 
 @Component({
-  selector: 'app-user-create',
-  templateUrl: './user-create.component.html',
-  styleUrl: './user-create.component.css'
+    selector: 'app-user-create',
+    templateUrl: './user-create.component.html',
+    styleUrl: './user-create.component.css',
+    standalone: false
 })
 export class UserCreateComponent {
   userForm!: FormGroup;

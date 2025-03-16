@@ -5,9 +5,10 @@ import { UserService } from '../../services/user.service';
 import { user } from '../../models/user';
 
 @Component({
-  selector: 'app-user-update',
-  templateUrl: './user-update.component.html',
-  styleUrl: './user-update.component.css'
+    selector: 'app-user-update',
+    templateUrl: './user-update.component.html',
+    styleUrl: './user-update.component.css',
+    standalone: false
 })
 export class UserUpdateComponent {
 

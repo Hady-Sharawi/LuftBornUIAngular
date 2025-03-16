@@ -4,9 +4,10 @@ import { Router } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 
 @Component({
-  selector: 'app-product-create',
-  templateUrl: './product-create.component.html',
-  styleUrl: './product-create.component.css'
+    selector: 'app-product-create',
+    templateUrl: './product-create.component.html',
+    styleUrl: './product-create.component.css',
+    standalone: false
 })
 export class ProductCreateComponent {
   productForm!: FormGroup;

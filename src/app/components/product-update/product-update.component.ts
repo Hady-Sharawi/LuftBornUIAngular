@@ -5,9 +5,10 @@ import { ProductService } from '../../services/product.service';
 import { product } from '../../models/product';
 
 @Component({
-  selector: 'app-product-update',
-  templateUrl: './product-update.component.html',
-  styleUrl: './product-update.component.css'
+    selector: 'app-product-update',
+    templateUrl: './product-update.component.html',
+    styleUrl: './product-update.component.css',
+    standalone: false
 })
 export class ProductUpdateComponent implements OnInit {
   productForm!: FormGroup;
